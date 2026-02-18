@@ -54,14 +54,10 @@ partitions {
 				reg = <0x0 0xe0000>;
 				read-only;
 			};
-
-			/* BDINFO: 0x10000 @ 0x0e0000 */
 			partition@e0000 {
 				label = "u-boot-env";
 				reg = <0xe0000 0x10000>;
 			};
-
-			/* SYSINFO: 0x10000 @ 0x0f0000 */
 			partition@f0000 {
 				label = "sysinfo";
 				reg = <0xf0000 0x10000>;
@@ -94,7 +90,6 @@ partitions {
 				label = "jffs2_log";
 				reg = <0x200000 0x100000>;
 			};
-			
 			partition@300000 {
 				compatible = "openwrt,uimage", "denx,uimage";
 				label = "firmware";
@@ -161,8 +156,6 @@ partitions {
 	nvmem-cells = <&factory_macaddr>;
 	nvmem-cell-names = "mac-address";
 };
-
-
 
 &switch0 {
 	ports {
